@@ -91,7 +91,7 @@ export default {
     //         role: this.role,
     //         surname: this.surname,
     //         headers: {
-    //         'Authorization': 'Bearer '+ 'Pippo89',
+    //         'Authorization': 'Bearer '+ '',
     //         "Content-Type": "application/json",
     //         }
     //         })
@@ -108,7 +108,7 @@ export default {
     // deleteAddress(id){
     //     this.axios.delete('http://127.0.0.1:8000/api/players/'+ id, {
     //         headers: {
-    //         'Authorization': 'Bearer '+ 'Pippo89',
+    //         'Authorization': 'Bearer '+ '',
     //         "Content-Type": "application/json",
     //         }
     //         })
