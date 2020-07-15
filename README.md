@@ -1,4 +1,4 @@
-# api
+# Riproduzione di un simil Netflix, utilizzando API TheMovieDB
 
 ## Project setup
 ```
