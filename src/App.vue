@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view :names="names"/>
+    <!-- <Footer /> -->
   </div>
 </template>
 
@@ -8,6 +9,7 @@
 
 import axios from 'axios';
 // import Navigation from '@/components/navigations.vue'
+// import Footer from './components/footer.vue'
 
     export default {
     name: "App",
@@ -33,7 +35,7 @@ import axios from 'axios';
         // axios
         //     .get(apiBaseUrl + '/search/tv', {
         //     params: {
-        //     'api_key': 'ccb9c8ef6b3a33f07b7be007336fd3e2',
+        //     'api_key': '',
         //     'query': 'halo',
         //     'language': 'en-EN'
         //     },
@@ -45,7 +47,10 @@ import axios from 'axios';
         //     this.films = response.data.results
         //     console.log(response.data);
         // })
-    }
+    },
+    // components: {
+    //     Footer
+    // }
 }
 </script>
 
