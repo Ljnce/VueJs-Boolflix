@@ -7,7 +7,7 @@
                    <img class="logo-heroflix" alt="Vue logo" src="../assets/logo copia.png" />
                </div>
                <div class="user-choice">
-                   <img alt="Ironman"  src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e13eb438650505.598fa118c8eab.jpg" @click="click = true" />
+                   <img alt="Ironman" class="iron" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e13eb438650505.598fa118c8eab.jpg" @click="click = true" />
                    <img alt="Wonder"  src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/61b37438650505.598fa7a1c8da3.jpg" @click="click = true" />
                    <img alt="Tchalla"  src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1454d038650505.598fa118c9674.jpg" @click="click = true" />
                </div>
@@ -15,6 +15,7 @@
        </div>
        <!-- Header -->
        <div class="header">
+           <!-- Alternativa Header utilizzando App.vue e importanto <Header /> e <Navigation /> -->
             <img alt="Vue logo" src="../assets/hero.png" />
        </div>
        <!-- Main -->
@@ -80,7 +81,7 @@
             </div>
             <!-- Footer -->
             <div class="footer">
-
+                       <!-- Alternativa Footer utilizzando App.vue e importanto <Footer /> -->
             </div>
         </div>
     </div>
@@ -105,10 +106,11 @@ export default {
     },
     // Creo funzioni derivanti da @click
     created() {
-       this.searchFilm();
-       this.searchTelefilm();
+
+
        this.showFilm();
        this.showTelefilm();
+       this.image();
     },
     // Return/ utilizzo funzioni
     methods: {
@@ -148,41 +150,13 @@ export default {
                 console.log(response.data);
             })
         },
-        showFilm: function () {
+        showFilm()  {
             $('.default-film').css({"display": "none"});
         },
         showTelefilm: function () {
             $('.default-telefilm').css({"display": "none"});
         }
-    },
-    // Filters:
-    filters: {
-       decimalTelefilm (value) {
-            return parseInt(Math.ceil(value/ 2));
-        },
-        decimalFilm (value) {
-            return parseInt(Math.ceil(value/ 2));
-        }
     }
-    // mounted() {
-    //     var apiBaseUrl = 'https://api.themoviedb.org/3';
-    //     // var foto = 'https://image.tmdb.org/t/p/w342';
-    //     axios
-    //         .get(apiBaseUrl + '/search/tv', {
-    //         params: {
-    //         'api_key': '',
-    //         'query': 'avengers',
-    //         'language': 'en-EN'
-    //         },
-    //         headers: {
-    //         "Content-Type": "application/json"
-    //         }
-    //     })
-    //     .then(response => {
-    //         this.films = response.data.results
-    //         console.log(response.data);
-    //     })
-    // }
 }
 
 </script>
@@ -196,13 +170,12 @@ $primary_color: #f28400;
         padding: 0;
         box-sizing: border-box;
         #login {
-            min-height: 100vh;
+            height: 100vh;
             width: 100vw;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: black;
-            position: fixed;
             z-index:1;
             .heroflix-login {
                 .logo {
@@ -380,10 +353,6 @@ $primary_color: #f28400;
                 }
             }
         }
-        .footer {
-            height: 100px;
-            border: 1px solid black;
-        }
     }
 
 
@@ -394,8 +363,8 @@ $primary_color: #f28400;
                .heroflix-login {
                     .logo {
                         .logo-heroflix {
-                            height: 60px;
-                            width: 200px;
+                            height: 70px;
+                            width: 230px;
                         }
                     }
                    .user-choice {
