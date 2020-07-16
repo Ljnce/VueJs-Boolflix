@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Api from "../views/Api.vue";
 import Film from "../views/Film.vue";
+import Laravel from "../views/Laravel.vue";
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: "/film",
     name: "Film",
     component: Film
+  },
+  {
+    path: "/laravel",
+    name: "Laravel",
+    component: Laravel
   },
   {
     path: "/about",

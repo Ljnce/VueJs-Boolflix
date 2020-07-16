@@ -106,11 +106,10 @@ export default {
     },
     // Creo funzioni derivanti da @click
     created() {
-
-
+       this.searchFilm();
+       this.searchTelefilm();
        this.showFilm();
        this.showTelefilm();
-       this.image();
     },
     // Return/ utilizzo funzioni
     methods: {
@@ -155,6 +154,14 @@ export default {
         },
         showTelefilm: function () {
             $('.default-telefilm').css({"display": "none"});
+        }
+    },
+    filters: {
+        decimalFilm(value) {
+           return parseInt(Math.ceil(value/ 2));
+       },
+        decimalTelefilm(value) {
+            return parseInt(Math.ceil(value/ 2));
         }
     }
 }

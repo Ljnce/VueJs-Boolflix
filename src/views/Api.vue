@@ -1,28 +1,5 @@
 <template>
      <div id="id">
-
-        <!-- <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-header">Vtest</div>
-                        <div class="card-body">
-                           <form @submit="formSubmit">
-                                <strong>Role:</strong>
-                                <input type="text" class="form-control" v-model="role">
-                                <strong>Surname:</strong>
-                                <textarea class="form-control" v-model="surname"></textarea>
-                                <button >Submit</button>
-                            </form>
-                            <strong>Output:</strong>
-                           <pre>
-                           {{output}}
-                           </pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <div class="input">
             <h2> Inserisci un numero </h2>
             <input type="text" v-model="number">
@@ -34,12 +11,6 @@
 
             </div>
         </div>
-
-        <div class="halo-stamp" v-for="name in names" :key="name.id">
-            <h1>{{name.role}}</h1>
-            <h2 style="color:red">{{name.surname}}</h2>
-            <!-- <button @click="deleteAddress(name.id)">Delete</button> -->
-        </div>
     </div>
 </template>
 
@@ -49,14 +20,16 @@ import $ from 'jquery';
 
 export default {
     name: "id",
-    props: ['names'],
     data() {
         return {
             number: ''
         }
     },
+    created() {
+       this.nan();
+   },
     methods: {
-        nan() {
+        nan: function() {
             if (isNaN(this.number)) {
                 alert('non è un numero')
             } else {
@@ -75,51 +48,6 @@ export default {
             }
         }
     }
-    // data() {
-    //    return {
-    //         role: '',
-    //         surname: '',
-    //         output: ''
-    //     }
-    // },
-    // methods: {
-    //
-    // formSubmit(e) {
-    //     e.preventDefault();
-    //     var currentObj = this;
-    //     this.axios.post('http://127.0.0.1:8000/api/players', {
-    //         role: this.role,
-    //         surname: this.surname,
-    //         headers: {
-    //         'Authorization': 'Bearer '+ '',
-    //         "Content-Type": "application/json",
-    //         }
-    //         })
-    //         .then(response => {
-    //             console.log(response);
-    //             currentObj.output = response.data;
-    //         })
-    //         .catch(function (error) {
-    //             console.log(error);
-    //             currentObj.output = error;
-    //         });
-    //     },
-    //
-    // deleteAddress(id){
-    //     this.axios.delete('http://127.0.0.1:8000/api/players/'+ id, {
-    //         headers: {
-    //         'Authorization': 'Bearer '+ '',
-    //         "Content-Type": "application/json",
-    //         }
-    //         })
-    //         .then(function(response){
-    //         console.log(response)
-    //         })
-    //        .catch(function (error) {
-    //         console.log(error);
-    //         });
-    //     }
-    // }
 }
 
 </script>

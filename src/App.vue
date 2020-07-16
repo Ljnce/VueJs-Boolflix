@@ -13,24 +13,24 @@ import axios from 'axios';
 
     export default {
     name: "App",
-    data () {
-      return {
-        names: null,
-        // films: null
-      }
-    },
-    mounted () {
-        axios
-            .get('http://127.0.0.1:8000/api/players', {
-            headers: {
-            'Authorization': 'Bearer '+ '',
-            "Content-Type": "application/json",
-            }
-        })
-        .then(response => {
-            this.names = response.data
-            console.log(response.data);
-        })
+    // data () {
+    //   return {
+    //     names: null,
+    //     // films: null
+    //   }
+    // },
+    // mounted () {
+    //     axios
+    //         .get('http://127.0.0.1:8000/api/players', {
+    //         headers: {
+    //         'Authorization': 'Bearer '+ '',
+    //         "Content-Type": "application/json",
+    //         }
+    //     })
+    //     .then(response => {
+    //         this.names = response.data
+    //         console.log(response.data);
+    //     })
         // var apiBaseUrl = 'https://api.themoviedb.org/3';
         // axios
         //     .get(apiBaseUrl + '/search/tv', {

@@ -4,6 +4,7 @@
       <router-link to="/about">About</router-link>
       <router-link to="/api">Api</router-link>
       <router-link to="/film">Film</router-link>
+      <router-link to="/laravel">Laravel</router-link>
     </div>
 </template>
 
