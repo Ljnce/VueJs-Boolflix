@@ -7,7 +7,7 @@
 
 <script>
 
-import axios from 'axios';
+// import axios from 'axios';
 // import Navigation from '@/components/navigations.vue'
 // import Footer from './components/footer.vue'
 
@@ -47,7 +47,7 @@ import axios from 'axios';
         //     this.films = response.data.results
         //     console.log(response.data);
         // })
-    },
+    // },
     // components: {
     //     Footer
     // }
